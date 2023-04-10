@@ -1,6 +1,6 @@
 import { getRefs } from "./js/getRefs";
 import LoadMoreButton from "./js/loadMoreButton";
-import { renderMarkup } from "./js/renderMarkup";
+import { renderMarkup, clear } from "./js/renderMarkup";
 import ImageApiService from "./js/imageApiService";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SimpleLightbox from "simplelightbox";
@@ -31,7 +31,7 @@ async function onSearch(e) {
     }
   
     imageApiService.resetPage();
-    
+    clear ();
     try {
         const { hits, totalHits } = await imageApiService.getImages();
     

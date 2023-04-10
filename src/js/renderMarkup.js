@@ -33,9 +33,9 @@ function renderMarkup(hits) {
   );
 }
 
-// function clear() {
-//   refs.imagesContainerEl.innerHTML = '';
-// }
+function clear() {
+  refs.imagesContainerEl.innerHTML = '';
+}
 
 
-export { renderMarkup, };
+export { renderMarkup, clear};
